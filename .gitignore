@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências
+node_modules
+
+# Arquivos de distribuição/build
+dist
+build
+
+# Variáveis de ambiente (arquivos com informações sensíveis)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos de configuração específicos do editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Outros arquivos temporários
+tmp
+temp
+package-lock.json 
+    
