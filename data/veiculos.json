@@ -3,32 +3,6 @@
     "id": "1",
     "placa": "XYZ-9876",
     "chassi": "ABCDEFGHIJKLMN",
-    "renavan": "12345678901",
-    "modelo": "Monza Classic Se",
-    "marca": "Chevrolet",
-    "ano": 1989
-  },
-  {
-    "id": "2",
-    "placa": "HTY-1266",
-    "chassi": "ABCDEFGHIJKLMN",
-    "renavan": "12345678901",
-    "modelo": "Opala Diplomata Se",
-    "marca": "Chevrolet",
-    "ano": 1991
-  },
-  {
-    "id": "3",
-    "placa": "XYZ-9876",
-    "chassi": "ABCDEFGHIJKLMN",
-    "modelo": "Monza Classic Se",
-    "marca": "Chevrolet",
-    "ano": 1989
-  },
-  {
-    "id": "4",
-    "placa": "XYZ-9876",
-    "chassi": "ABCDEFGHIJKLMN",
     "modelo": "Monza Classic Se",
     "marca": "Chevrolet",
     "ano": 1989

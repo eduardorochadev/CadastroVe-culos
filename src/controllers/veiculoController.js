@@ -34,11 +34,18 @@ async function saveCounter(counter) {
 async function createVeiculo(req, res) {
     try {
         const { placa, chassi, renavam, modelo, marca, ano } = req.body;
-        let id = await readCounter() + 1;
-        await saveCounter(id);
-        id = id.toString(); // Converter para string para consistência
-        const novoVeiculo = new Veiculo(id, placa, chassi, renavam, modelo, marca, ano);
         const veiculos = await readData();
+        let nextId;
+
+        if (veiculos.length === 0) {
+            nextId = 1;
+        } else {
+            nextId = await readCounter() + 1;
+        }
+
+        await saveCounter(nextId);
+        const id = nextId.toString();
+        const novoVeiculo = new Veiculo(id, placa, chassi, renavam, modelo, marca, ano);
         veiculos.push(novoVeiculo);
         await saveData(veiculos);
         res.status(201).json(novoVeiculo);
@@ -47,7 +54,6 @@ async function createVeiculo(req, res) {
         res.status(500).json({ message: 'Erro ao criar veículo.' });
     }
 }
-
 async function getVeiculos(req, res) {
     try {
         const veiculos = await readData();
