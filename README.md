@@ -23,8 +23,8 @@ npm run test
 
 ## Endpoints
 
-- POST - Adicionar um novo veículo
-- GET - Listar todos os veículos
+- POST - http://localhost:3000/api/veiculos - Adicionar um novo veículo
+- GET - http://localhost:3000/api/veiculos- Listar todos os veículos
 - GET - Listar um veículo por ID
 - PUT - Atualizar um veículo por ID
 - DELETE - Deletar um veículo por ID

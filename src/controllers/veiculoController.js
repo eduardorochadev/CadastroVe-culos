@@ -1,9 +1,9 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
-const {v4: uuidv4} = require('uuid');
 const Veiculo = require('../models/veiculo');
 
 const dataFilePath = path.join(__dirname, '../../data/veiculos.json');
+const counterFilePath = path.join(__dirname, '../../data/id_counter.json');
 
 async function readData() {
     try {
@@ -15,23 +15,35 @@ async function readData() {
 }
 
 async function saveData(data) {
+    await fs.writeFile(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+async function readCounter() {
     try {
-        await fs.promises.writeFile(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
+        const counterData = await fs.readFile(counterFilePath, 'utf8');
+        return JSON.parse(counterData).counter || 0;
     } catch (error) {
-        console.error('Erro ao salvar os dados:', error);
+        return 0;
     }
+}
+
+async function saveCounter(counter) {
+    await fs.writeFile(counterFilePath, JSON.stringify({ counter }), 'utf8');
 }
 
 async function createVeiculo(req, res) {
     try {
         const { placa, chassi, renavam, modelo, marca, ano } = req.body;
-        const id = uuidv4();
+        let id = await readCounter() + 1;
+        await saveCounter(id);
+        id = id.toString(); // Converter para string para consistência
         const novoVeiculo = new Veiculo(id, placa, chassi, renavam, modelo, marca, ano);
         const veiculos = await readData();
         veiculos.push(novoVeiculo);
         await saveData(veiculos);
         res.status(201).json(novoVeiculo);
     } catch (error) {
+        console.error("Erro ao criar veículo:", error);
         res.status(500).json({ message: 'Erro ao criar veículo.' });
     }
 }
