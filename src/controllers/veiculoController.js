@@ -3,11 +3,11 @@ const path = require('path');
 const {v4: uuidv4} = require('uuid');
 const Veiculo = require('../models/veiculo');
 
-const dataFilePath = path.join(__dirname, '../data/veiculos.json');
+const dataFilePath = path.join(__dirname, '../../data/veiculos.json');
 
 async function readData() {
     try {
-        const data = await fs.promises.readFile(dataFilePath, 'utf8');
+        const data = await fs.readFile(dataFilePath, 'utf8');
         return JSON.parse(data);
     } catch (error) {
         return [];
