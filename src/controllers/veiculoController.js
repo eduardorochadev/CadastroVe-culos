@@ -57,7 +57,7 @@ async function createVeiculo(req, res) {
 async function getVeiculos(req, res) {
     try {
         const veiculos = await readData();
-        res.json(veiculos);
+        res.status(200).json(veiculos);
     } catch (error) {
         res.status(500).json({ message: 'Erro ao buscar veículos.' });
     }
@@ -69,7 +69,7 @@ async function getVeiculoById(req, res) {
         const veiculos = await readData();
         const veiculo = veiculos.find(v => v.id === id);
         if (veiculo) {
-            res.json(veiculo);
+            res.status(200).json(veiculo);
         } else {
             res.status(404).json({ message: 'Veículo não encontrado.' });
         }
@@ -87,7 +87,7 @@ async function updateVeiculo(req, res) {
         if (index !== -1) {
             veiculos[index] = { id, placa, chassi, renavam, modelo, marca, ano };
             await saveData(veiculos);
-            res.json(veiculos[index]);
+            res.status(200).json(veiculos[index]);
         } else {
             res.status(404).json({ message: 'Veículo não encontrado.' });
         }
@@ -117,5 +117,6 @@ module.exports = {
     getVeiculos,
     getVeiculoById,
     updateVeiculo,
-    deleteVeiculo
+    deleteVeiculo,
+    readData
 };
