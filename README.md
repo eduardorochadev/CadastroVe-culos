@@ -20,7 +20,6 @@ backend_cadastro/
 │   └── app.js
 ├── test/
 │   └── veiculo.test.js
-├── swagger.js
 ├── package.json
 └── README.md
 ```
