@@ -1,11 +1,15 @@
-# Projeto Veículos API
->  Projeto para teste prático
+# Projeto Veículos API  
+> Projeto para teste prático técnico – cadastro e gerenciamento de veículos via API RESTful com Node.js
 
-# Estrutrua de pastas do projeto
->  backend_cadastro/
+---
+
+## 📁 Estrutura de Pastas
+
+```
+backend_cadastro/
 ├── data/
-│   └── veiculos.json
-|   └── id_counter.json
+│   ├── veiculos.json
+│   └── id_counter.json
 ├── src/
 │   ├── controllers/
 │   │   └── veiculoController.js
@@ -16,33 +20,81 @@
 │   └── app.js
 ├── test/
 │   └── veiculo.test.js
+├── swagger.js
 ├── package.json
 └── README.md
+```
 
-## Requirements
-- Node versão 1.2.3
-- Mocha
-  - Xyz
-     
-## Setup
+---
 
+## ✅ Requisitos
+
+- Node.js `^v22.8.0`
+- Mocha `^11.1.0`
+- Chai `^4.3.4`
+- Express `^5.1.0`
+
+---
+
+## ⚙️ Instalação
+
+1. Clone o repositório:
+
+```
+git clone https://github.com/eduardorochadev/cadastro-api
+cd backend_cadastro
+```
+
+2. Instale as dependências:
+
+```
 npm install
+```
 
-## Project Run
+---
 
+## ▶️ Como Executar
+
+Inicie a aplicação com:
+
+```
 npm start
+```
 
+A aplicação estará disponível em:
 
-## Test
+```
+http://localhost:3000
+```
 
+---
 
+## 🧪 Executar os Testes
+
+Antes de rodar os testes, pare o servidor se estiver rodando.
+
+```
 npm test
+```
+
+Os testes cobrem os principais endpoints da aplicação.
+
+---
+
+## 🔗 Endpoints Disponíveis
+
+| Verbo  | Rota               | Descrição                          |
+|--------|--------------------|------------------------------------|
+| GET    | `/veiculos`        | Retorna todos os veículos          |
+| POST   | `/veiculos`        | Cria um novo veículo               |
+| GET    | `/veiculos/:id`    | Retorna um veículo por ID          |
+| PUT    | `/veiculos/:id`    | Atualiza os dados de um veículo    |
+| DELETE | `/veiculos/:id`    | Remove um veículo existente        |
+
+---
 
 
-## Endpoints
+## 🧾 Observações
 
-GET /veiculos - Deve retornar um array de veículos
-POST /veiculos - Deve criar um novo veículo
-GET /veiculos/:id - Deve retornar veículo por ID
-PUT /veiculos/:id - Deve atualizar um veículo existente
-DELETE /veiculos/:id - Deve deletar um veículo existente
+- Banco de dados simulado com arquivos JSON
+- Projeto sem dependência de banco relacional
