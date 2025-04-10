@@ -3,8 +3,18 @@
     "id": "1",
     "placa": "HTY-1266",
     "chassi": "ABCDEFGHIJKLMN",
+    "renavam": "2243546",
     "modelo": "Monza Classic SE",
     "marca": "Chevrolet",
     "ano": 1989
+  },
+  {
+    "id": "4",
+    "placa": "HUA-1200",
+    "chassi": "9BGDJKAD44KJF",
+    "renavan": "1244233",
+    "modelo": "OPALA ",
+    "marca": "CHEVROLET",
+    "ano": 1991
   }
 ]
