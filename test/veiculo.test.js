@@ -6,7 +6,6 @@ const path = require('path');
 const dataFilePath = path.join(__dirname, '../data/veiculos.json');
 const counterFilePath = path.join(__dirname, '../data/id_counter.json');
 
-// Helpers para mockar req/res
 function createRes() {
   return {
     statusCode: null,
@@ -27,7 +26,6 @@ function createRes() {
 
 describe('Controller de Veículos', () => {
 
-  // Limpa os arquivos antes de cada teste
   beforeEach(async () => {
     await fs.writeFile(dataFilePath, '[]', 'utf8');
     await fs.writeFile(counterFilePath, JSON.stringify({ counter: 0 }), 'utf8');

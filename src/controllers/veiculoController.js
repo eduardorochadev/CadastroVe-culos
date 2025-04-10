@@ -13,11 +13,9 @@ async function readData() {
         return [];
     }
 }
-
 async function saveData(data) {
     await fs.writeFile(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
 }
-
 async function readCounter() {
     try {
         const counterData = await fs.readFile(counterFilePath, 'utf8');
@@ -26,11 +24,9 @@ async function readCounter() {
         return 0;
     }
 }
-
 async function saveCounter(counter) {
     await fs.writeFile(counterFilePath, JSON.stringify({ counter }), 'utf8');
 }
-
 async function createVeiculo(req, res) {
     try {
         const { placa, chassi, renavam, modelo, marca, ano } = req.body;
@@ -62,7 +58,6 @@ async function getVeiculos(req, res) {
         res.status(500).json({ message: 'Erro ao buscar veículos.' });
     }
 }
-
 async function getVeiculoById(req, res) {
     try {
         const { id } = req.params;
@@ -77,7 +72,6 @@ async function getVeiculoById(req, res) {
         res.status(500).json({ message: 'Erro ao buscar veículo.' });
     }
 }
-
 async function updateVeiculo(req, res) {
     try {
         const { id } = req.params;
@@ -95,7 +89,6 @@ async function updateVeiculo(req, res) {
         res.status(500).json({ message: 'Erro ao atualizar veículo.' });
     }
 }
-
 async function deleteVeiculo(req, res) {
     try {
         const { id } = req.params;
