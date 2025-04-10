@@ -1,5 +1,5 @@
 # Projeto Veículos API  
-> Projeto para teste prático técnico – cadastro e gerenciamento de veículos via API RESTful com Node.js
+> Projeto para teste prático técnico – cadastro e gerenciamento de veículos via API REST com Node.js
 
 ---
 
