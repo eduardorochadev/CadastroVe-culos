@@ -97,3 +97,9 @@ Os testes cobrem os principais endpoints da aplicação.
 
 - Banco de dados simulado com arquivos JSON
 - Projeto sem dependência de banco relacional
+
+## ✍️ Autor
+
+**Eduardo Macedo**  
+Desenvolvedor Full Stack | entusiasta automotivo  
+[LinkedIn](https://www.linkedin.com/in/eduardomacedor/) • [GitHub](https://github.com/eduardorochadev)
