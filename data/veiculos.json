@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "placa": "HTY-1266",
+    "placa": "HTY1266",
     "chassi": "ABCDEFGHIJKLMN",
     "renavam": "2243546",
     "modelo": "Monza Classic SE",
@@ -9,12 +9,48 @@
     "ano": 1989
   },
   {
-    "id": "4",
-    "placa": "HUA-1200",
-    "chassi": "9BGDJKAD44KJF",
-    "renavan": "1244233",
-    "modelo": "OPALA ",
+    "id": "3",
+    "placa": "HVT3355",
+    "chassi": "9BA4455KDJFDKJ",
+    "renavam": "55443366",
+    "modelo": "CHEVETTE",
     "marca": "CHEVROLET",
-    "ano": 1991
+    "ano": 1993
+  },
+  {
+    "id": "6",
+    "placa": "HUA7672",
+    "chassi": "9BJCAJ3309FDNN",
+    "renavam": "22556677",
+    "modelo": "FUSCA",
+    "marca": "VW",
+    "ano": 1982
+  },
+  {
+    "id": "7",
+    "placa": "HTY1200",
+    "chassi": "9BJD44DAE44545",
+    "renavam": "22335577",
+    "modelo": "OPALA",
+    "marca": "CHEVROLET",
+    "ano": 1989
+  },
+  {
+    "id": "13",
+    "placa": "0CR4433",
+    "chassi": "9BJ56677889D",
+    "renavam": "66554443",
+    "modelo": "CRETA",
+    "marca": "HYUNDAI",
+    "ano": 2025
+  },
+  {
+    "id": "14",
+    "placa": "NUR3344",
+    "chassi": "8BJF445566N994",
+    "renavam": "88776655",
+    "modelo": "HILUX",
+    "marca": "TOYOTA",
+    "ano": 2017
   }
 ]
